@@ -6,8 +6,8 @@ public class MortgageCalculator {
         Constant used to calculate monthly interest rate and
         and month to pay off the load.
      */
-    protected static final byte MONTHS_IN_A_YEAR = 12;
-    protected static final byte PERCENT_DIVISOR = 100;
+    private static final byte MONTHS_IN_A_YEAR = 12;
+    private static final byte PERCENT_DIVISOR = 100;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
