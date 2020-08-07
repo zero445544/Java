@@ -8,15 +8,39 @@ public class MortgageCalculator {
      */
     private static final byte MONTHS_IN_A_YEAR = 12;
     private static final byte PERCENT_DIVISOR = 100;
+    private static final int THOUSAND = 1000;
+    private static final int MILLION = 1000000;
+    private static final int MAX_INTEREST_RATE = 30;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Principal: ");
-        int principal = scanner.nextInt();
+        int principal;
 
-        System.out.print("Annual Interest Rate: ");
-        float annualInterestRate = scanner.nextFloat();
+        while(true) {
+            System.out.print("Principal ($1K - $1M): ");
+
+            principal= scanner.nextInt();
+
+            if (THOUSAND <= principal && principal <= MILLION)
+                break;
+
+            System.out.println("Enter a number between 1,000 and 1,000,000");
+        }
+
+        float annualInterestRate;
+
+        while(true) {
+            System.out.print("Annual Interest Rate: ");
+
+            annualInterestRate = scanner.nextFloat();
+
+            if (annualInterestRate > 0 && annualInterestRate <= MAX_INTEREST_RATE)
+                break;
+
+            System.out.println("Enter a value greater than 0 and less than or equal to ");
+        }
+
 
         System.out.print("Period (years): ");
         byte periodInYears = scanner.nextByte();
