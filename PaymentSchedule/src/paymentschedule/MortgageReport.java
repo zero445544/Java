@@ -15,17 +15,6 @@ public class MortgageReport {
     }
 
     public void printMortgage() {
-        // Do the mortgage calculation
-        /*
-                  r(1 + r)^n
-            M = P---------------
-                  (1 + r)^n - 1
-            - M = monthly payment or mortgage (What we need to figure out.)
-            - P = principal
-            - r = monthly interest rate
-            - n = months to pay on the loan
-         */
-        // Name the variable to match the formula for simplicity.
         System.out.println("Mortgage");
         System.out.println("--------");
 
