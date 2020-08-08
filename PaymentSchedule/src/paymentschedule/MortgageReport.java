@@ -20,7 +20,7 @@ public class MortgageReport {
 
         double mortgage = mortgageCalculator.calculateMortgage();
 
-        System.out.println("Monthly Payments: " + NumberFormat.getCurrencyInstance().format(mortgage));
+        System.out.println("Monthly Payments: " + getCurrencyFormat(mortgage));
     }
 
     public void printPaymentSchedule() {
@@ -33,9 +33,12 @@ public class MortgageReport {
         while(balance > 0) {
             balance = mortgageCalculator.calculateBalance();
 
-            String principalRemainderString = NumberFormat.getCurrencyInstance().format(balance);
-
-            System.out.println(principalRemainderString);
+            System.out.println(getCurrencyFormat(balance));
         }
+    }
+
+    private String getCurrencyFormat(double value)
+    {
+        return NumberFormat.getCurrencyInstance().format(value);
     }
 }
