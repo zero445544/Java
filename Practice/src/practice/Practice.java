@@ -5,8 +5,6 @@
  */
 package practice;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Steven-PC
@@ -17,10 +15,8 @@ public class Practice {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Name: ");
-        String Name = scanner.nextLine().trim();
-        System.out.println("You are " + Name);
+        System.out.println("Hello World");
+
     }
     
 }
