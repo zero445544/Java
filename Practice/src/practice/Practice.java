@@ -5,12 +5,15 @@
  */
 package practice;
 
+import java.util.Date;
+
 public class Practice {
 
     public static void main(String[] args) {
-        int myAge = 30;
-        int herAge = (myAge);
-        System.out.println(herAge);
+        byte age = 30;
+        Date now = new Date();
+        now.getTime();
+        System.out.println(now);;
 
     }
     
